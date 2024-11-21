@@ -13,17 +13,17 @@ const ItemListContainer = ({ saludo }) => {
     getProducts
       .then((respuesta) => {
         if(idCategory){
-          //filtrar los productos
-          const newProducts = respuesta.filter((producto)=> producto.category.toLowerCase() === idCategory)
+         
+          const newProducts = respuesta.filter((producto)=> producto.category.toLowerCase() === idCategory.toLowerCase())
           
           setProducts(newProducts)
         }else{
-          //devolver todos los productos
+          
           setProducts(respuesta)
         }
       })
       .catch((error) => console.log(error))
-    //   .finally(() => console.log("Finalizo la promesa"));
+   
   }, [idCategory]);
 
   return (

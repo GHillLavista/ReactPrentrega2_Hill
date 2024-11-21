@@ -32,7 +32,7 @@ function NavBar() {
             </ul>
             <div className='carrito'> 
                 <FiShoppingCart />
-                <span className='badge'>5</span>
+                <span className='badge'>6</span>
             </div>
         
         </div>
